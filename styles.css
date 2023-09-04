@@ -1,3 +1,8 @@
+/* Define a custom property */
+:root {
+    --white: #fff;
+}
+
 /* Reset some default styles */
 * {
     margin: 0;
@@ -14,7 +19,7 @@ body {
 /* Header styles */
 header {
     background-color: #333;
-    color: #fff;
+    color: var(--white);
     padding: 10px 0;
 }
 
@@ -30,7 +35,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: var(--white);
     font-weight: bold;
 }
 
@@ -42,7 +47,7 @@ nav a {
 
 .banner {
     background: linear-gradient(200deg, #A5B4FC, #4F46E5);
-    color: #fff;
+    color: var(--white);
     padding: 20px;
     border-radius: 10px;
 }
@@ -54,7 +59,7 @@ nav a {
 .btn {
     display: inline-block;
     background-color: #4F46E5;
-    color: #fff;
+    color: var(--white);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -75,7 +80,7 @@ nav a {
 }
 
 .product {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -85,7 +90,8 @@ nav a {
 
 .product img {
     max-width: 100%;
-    height: auto;
+    width: 16rem;
+    height: 12rem;
     border-radius: 5px;
 }
 
@@ -101,7 +107,7 @@ nav a {
 
 /* Shopping cart styles */
 .shopping-cart {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -154,6 +160,16 @@ nav a {
 
 /* Checkout styles */
 .checkout {
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* About Us Section */
+#about-us {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -162,27 +178,43 @@ nav a {
     margin-top: 20px;
 }
 
-/* About us styles */
-.about-us {
-    background-color: #fff;
-    padding: 20px;
+/* Cards */
+.cards {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cards li {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+    text-align: left;
+}
+
+.card {
+    background-color: #CFFFDC; /* Use your pastel color here */
+    padding: 15px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    margin-top: 20px;
+}
+
+.card p {
+    margin: 0;
 }
 
 /* Footer styles */
 footer {
     background-color: #333;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     padding: 10px 0;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -190,9 +222,4 @@ footer {
     list-style: none;
     display: inline;
     margin-left: 10px;
-}
-
-.social-icons img {
-    max-width: 30px;
-    height: auto;
 }
